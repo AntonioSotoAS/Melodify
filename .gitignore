@@ -1,15 +1,35 @@
+# Archivos generados por el sistema
+.gradle/
+/build/
+/captures/
+
+# Archivos de configuración de Android Studio
 *.iml
-.gradle
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+
+# Archivos de configuración de Gradle
+/.gradle
 /local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
+
+# Archivos de construcción de Gradle
+/out/
+
+# Archivos de compilación de Android
+*.class
+*.jar
+*.war
+
+# Archivos de respaldo y copia de seguridad
+*~
+*.swp
+*.bak
+*.tmp
+
+# Otras carpetas y archivos
 .DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
-local.properties
+Thumbs.db
+
