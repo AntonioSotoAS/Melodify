@@ -9,8 +9,11 @@
     >
 
     <RelativeLayout
+        android:id="@+id/parte_superior"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="70"
+        >
 
         <ImageView
             android:id="@+id/imageView4"
@@ -52,116 +55,87 @@
             app:srcCompat="@mipmap/ic_launcher" />
 
 
-        <TextView
-            android:id="@+id/txt_email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textColor="@color/md_theme_dark_outline"
-            android:text="Email o Username"
-            android:layout_below="@+id/ic_logo"
-            android:layout_alignLeft="@id/edt_email"
-            />
 
-        <EditText
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edt_email"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/txt_email"
-            android:ems="10"
-            android:inputType="textEmailAddress" />
+            android:layout_below="@+id/ic_logo"
+            android:layout_marginTop="30dp"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:textColorHint="@color/md_theme_dark_outline"
+            android:textColor="@color/md_theme_light_onTertiaryContainer"
+            android:hint="Correo o Nombre Usuario"
+            >
 
-        <TextView
-            android:id="@+id/txt_contra"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textColor="@color/md_theme_dark_outline"
-            android:text="Contraseña"
-            android:layout_below="@+id/edt_email"
-            android:layout_alignLeft="@id/edt_email"
-            />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textSize="18sp"
+                />
 
-        <EditText
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edt_contra"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/txt_contra"
-            android:ems="10"
-            android:inputType="textEmailAddress" />
+            android:layout_below="@+id/edt_email"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="30dp"
+            android:textColorHint="@color/md_theme_dark_outline"
+            android:textColor="@color/md_theme_light_onTertiaryContainer"
+            android:hint="Contraseña">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_below="@id/edt_contra"
-            android:gravity="center"
-            >
-
-            <ImageView
-                android:id="@+id/ic_llave"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                app:srcCompat="@mipmap/ic_llave"
-                />
-
-            <TextView
-                android:id="@+id/txt_olvido_contra"
-                android:layout_width="wrap_content"
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="@color/md_theme_dark_outline"
-                android:text="Olvidaste tu contraseña?"
-
+                android:inputType="textPassword"
+                android:textSize="18sp"
                 />
 
-            <TextView
-                android:id="@+id/txt_recuperar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="@color/md_theme_light_surfaceTint"
-                android:text="Recuperar"
-                />
-
-        </LinearLayout>
-
-
-
+        </com.google.android.material.textfield.TextInputLayout>
 
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Iniciar Sesión"
-        android:layout_gravity="center"
-        />
-
     <LinearLayout
+        android:id="@+id/layout_inciar_sesion"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@id/edt_contra"
+        android:layout_height="0dp"
+        android:layout_weight="10"
         android:gravity="center"
         >
 
-        <ImageView
-            android:id="@+id/ic_llave"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            app:srcCompat="@mipmap/ic_llave"
+        <Button
+            android:id="@+id/bt_inciar_sesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Iniciar Sesión"
+            android:textSize="28sp"
+            android:layout_gravity="center"
+            android:layout_below="@+id/parte_superior"
             />
-        <ImageView
-            android:id="@+id/ic_llave"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            app:srcCompat="@mipmap/ic_llave"
-            />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/olvidaste_contra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/bt_inciar_sesion"
+        android:gravity="center"
+        android:layout_weight="5"
+        >
+
+
+
         <ImageView
             android:id="@+id/ic_llave"
             android:layout_width="24dp"
@@ -169,16 +143,75 @@
             app:srcCompat="@mipmap/ic_llave"
             />
 
+        <TextView
+            android:id="@+id/txt_olvido_contra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/md_theme_dark_outline"
+            android:text="Olvidaste tu contraseña?"
+            android:layout_marginLeft="8dp"
+
             />
+
+        <TextView
+            android:id="@+id/txt_recuperar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/md_theme_light_surfaceTint"
+            android:text="Recuperar"
+            android:layout_marginLeft="8dp"
+            />
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_icons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@+id/olvidaste_contra"
+        >
+
+        <ImageView
+            android:id="@+id/ic_facebook"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:srcCompat="@mipmap/ic_facebook"
+            />
+        <ImageView
+            android:id="@+id/ic_google"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:srcCompat="@mipmap/ic_google"
+            android:layout_marginLeft="10dp"
+            />
+        <ImageView
+            android:id="@+id/ic_twiter"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:srcCompat="@mipmap/ic_twiter"
+            android:layout_marginLeft="10dp"
+            />
+
+        />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:orientation="horizontal"
-        android:layout_below="@id/edt_contra"
+        android:layout_below="@id/layout_icons"
         android:gravity="center"
+        android:layout_weight="5"
         >
 
 
@@ -186,7 +219,7 @@
             android:id="@+id/txt_aun_cuenta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textColor="@color/md_theme_dark_outline"
             android:text="Aún no tienes cuenta?"
 
@@ -196,13 +229,17 @@
             android:id="@+id/txt_inciar_sesion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/md_theme_light_surfaceTint"
             android:text="Inciar Sesión"
+            android:layout_marginLeft="10dp"
             />
 
     </LinearLayout>
+
+
+
 
 
 
