@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/rl_registrate"
+    >
+
+
+
+        <ImageView
+            android:id="@+id/ola_registro"
+            android:layout_width="match_parent"
+            android:minHeight="350dp"
+            android:maxHeight="350dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ola_registro"
+            android:scaleType="fitStart"
+            android:layout_gravity="start"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/md_theme_light_onPrimary"
+            android:text="Crea tu cuenta, aquí!"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="215dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="210dp"
+            android:text="Regístrate"
+            android:textColor="@color/md_theme_light_onPrimary"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ic_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="110dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+
+
+
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:id="@+id/edt_email_registro"
+               android:layout_width="320dp"
+               android:layout_height="wrap_content"
+               android:layout_centerHorizontal="true"
+               android:layout_marginTop="5dp"
+               style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+               android:textColorHint="@color/md_theme_dark_outline"
+               android:textColor="@color/md_theme_light_onTertiaryContainer"
+               android:layout_below="@id/ic_logo"
+               android:hint="Correo o Nombre Usuario"
+               >
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:inputType="textEmailAddress"
+                   android:textSize="18sp"
+                   />
+
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:id="@+id/edt_telefono"
+               android:layout_width="320dp"
+               android:layout_height="wrap_content"
+               android:layout_centerHorizontal="true"
+               android:layout_below="@+id/edt_email_registro"
+               style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+               android:layout_marginTop="5dp"
+               android:textColorHint="@color/md_theme_dark_outline"
+               android:textColor="@color/md_theme_light_onTertiaryContainer"
+               android:hint="Telefono">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:inputType="phone"
+                   android:textSize="18sp"
+                   />
+
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:id="@+id/edt_dni"
+               android:layout_width="320dp"
+               android:layout_height="wrap_content"
+               android:layout_centerHorizontal="true"
+               android:layout_below="@+id/edt_telefono"
+               style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+               android:layout_marginTop="5dp"
+               android:textColorHint="@color/md_theme_dark_outline"
+               android:textColor="@color/md_theme_light_onTertiaryContainer"
+               android:hint="Dni">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:inputType="number"
+                   android:maxLength="8"
+                   android:textSize="18sp"
+                   />
+
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:id="@+id/edt_contra_registro"
+               android:layout_width="320dp"
+               android:layout_height="wrap_content"
+               android:layout_centerHorizontal="true"
+               android:layout_below="@+id/edt_dni"
+               style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+               android:layout_marginTop="5dp"
+               android:textColorHint="@color/md_theme_dark_outline"
+               android:textColor="@color/md_theme_light_onTertiaryContainer"
+               android:hint="Contraseña">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:inputType="textPassword"
+                   android:textSize="18sp"
+                   />
+
+           </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+        <Button
+            android:id="@+id/bt_registrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registrarte"
+            android:textSize="28sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/edt_contra_registro"
+            android:layout_marginTop="15dp"
+            />
+
+    <ImageView
+            android:id="@+id/ic_facebook"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:srcCompat="@mipmap/ic_facebook"
+            android:layout_below="@+id/bt_registrar"
+            android:layout_toLeftOf="@+id/ic_google"
+            android:layout_marginTop="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/ic_google"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:srcCompat="@mipmap/ic_google"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@+id/bt_registrar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/ic_twiter"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:srcCompat="@mipmap/ic_twiter"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@+id/bt_registrar"
+            android:layout_toRightOf="@+id/ic_google"
+            android:layout_marginTop="10dp"
+            />
+
+
+        <ImageView
+            android:id="@+id/ic_llave"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@mipmap/ic_llave"
+            android:layout_below="@+id/ic_google"
+            android:layout_alignLeft="@+id/edt_contra_registro"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/txt_aun_cuenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/md_theme_dark_outline"
+            android:text="Ya tienes una cuenta?"
+            android:layout_below="@+id/ic_google"
+            android:layout_toRightOf="@+id/ic_llave"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/txt_inciar_sesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/md_theme_light_surfaceTint"
+            android:text="Inciar Sesión"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/ic_google"
+            android:layout_toRightOf="@+id/txt_aun_cuenta"
+            android:layout_marginTop="10dp"
+            />
+
+
+
+
+
+
+</RelativeLayout>
